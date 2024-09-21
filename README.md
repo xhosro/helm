@@ -168,13 +168,13 @@ then we create S3 bucket in AWS
 ```bash
 helm s3 version --mode
 
-helm s3 init s3://helm-s3-khosro/charts : Initialized empty repository at s3://helm-s3-khosro/charts
+helm s3 init s3://<bucket_name>/charts : Initialized empty repository at s3://helm-s3-khosro/charts
 ```
 we can see there is folder chart and inside it index.yaml
 
 give it a name : 
 ```bash
-helm repo add private s3://helm-s3-khosro/charts
+helm repo add private s3://<bucket_name>/charts
 
 helm repo list
 
@@ -214,7 +214,7 @@ so we genrate key pairs.
 ```
 pub   ed25519 2024-09-21 [SC] [expire : 2027-09-21]
       611C4E38A6F928516EA11A43CE08F815E56CF46D #fingerprint
-uid                      khosro <@gmail.com>
+uid                     username <mail@gmail.com>
 sub   cv25519 2024-09-21 [E] [expire : 2027-09-21]
 ```
 
